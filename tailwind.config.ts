@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -10,23 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        blue: '#007bff',
+        orange: '#f45d22',
         gray: {
           250: '#e0e0e0',
         },
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-  daisyui: {
-    themes: [
-      {
-        light: {
-          ...require('daisyui/src/theming/themes')['light'],
-          primary: '#f45d22',
-          secondary: '#007bff',
-          success: '#66bb6a',
-        },
-      },
-    ],
-  },
+  plugins: [],
 } satisfies Config;
