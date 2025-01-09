@@ -23,6 +23,7 @@ export default {
         light: {
           ...require('daisyui/src/theming/themes')['light'],
           primary: '#f45d22',
+          'primary-content': 'white',
           secondary: '#007bff',
           success: '#66bb6a',
         },
