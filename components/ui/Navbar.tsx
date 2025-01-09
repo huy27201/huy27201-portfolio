@@ -13,7 +13,7 @@ interface NavigationType {
 const navigationList: NavigationType[] = [
   {
     id: '1',
-    title: CommonText.home,
+    title: CommonText.navigation.home,
     path: '/',
     icon: (
       <svg
@@ -34,7 +34,7 @@ const navigationList: NavigationType[] = [
   },
   {
     id: '2',
-    title: CommonText.about,
+    title: CommonText.navigation.about,
     path: '/about',
     icon: (
       <svg
@@ -55,7 +55,7 @@ const navigationList: NavigationType[] = [
   },
   {
     id: '3',
-    title: CommonText.projects,
+    title: CommonText.navigation.projects,
     path: '/projects',
     icon: (
       <svg
@@ -76,7 +76,7 @@ const navigationList: NavigationType[] = [
   },
   {
     id: '4',
-    title: CommonText.contact,
+    title: CommonText.navigation.contact,
     path: '/contact',
     icon: (
       <svg
@@ -99,7 +99,9 @@ const navigationList: NavigationType[] = [
 
 const Navbar = () => {
   return (
-    <div className='fixed bottom-5 left-1/2 mx-auto -translate-x-1/2 rounded-2xl border bg-white p-2 shadow-lg'>
+    <div
+      className={`fixed bottom-5 left-1/2 z-50 mx-auto -translate-x-1/2 rounded-2xl border bg-white/90 p-2 shadow-lg backdrop-blur-sm`}
+    >
       <Nav>
         {navigationList.map(({ id, path, icon, title }) => (
           <NavItem key={id} title={title} path={path}>
