@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Public_Sans } from 'next/font/google';
 import './globals.css';
 import { CommonText } from '@/constants';
+import Navbar from '@/components/ui/Navbar';
 
 const publicSans = Public_Sans({
   variable: '--font-public-sans',
@@ -19,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' data-theme='light'>
       <body className={`${publicSans.variable} antialiased`}>
         <div className='min-h-screen bg-zinc-50 pb-24 pt-12'>
+          <Navbar />
           <div className='mx-auto max-w-4xl rounded-3xl border border-gray-250 p-8'>
             {children}
           </div>
